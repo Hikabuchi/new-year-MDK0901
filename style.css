@@ -10,6 +10,8 @@
 }
 
 .bacraund{
+    width: 1920px;
+    height: auto;
     background-image: url(./img/bac.jpg);
     background-repeat: no-repeat;
 }
@@ -17,4 +19,9 @@
 .cooking-table{
     background-image: url(./img/patern-table.jpg);
     background-repeat: repeat;
+}
+
+.information-panel{
+    display: flex;
+    justify-content: space-between;
 }
