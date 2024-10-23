@@ -8,29 +8,45 @@
 </head>
 <body>
     <div class="container">
-        <div class="bacraund">
+        <div class="bacraund field-of-play">
             <!--инфо панель-->
             <div class="information-panel">
-                <div id="time"><img src="./img/icons8-время-50.png" alt="icon">00:00</div>
-                <div id="money"><img src="./img/" alt="icon">00</div>
-                <div id="dishes-prepared"><img src="" alt="icon">00</div>
+                <div id="time"><img src="./img/icons8-время-50.png" class="icon" alt="icon">&nbsp;<span id="timer">00:00</span></div>
+                <div id="money"><img src="./img/icons8-перевод-денег-50.png" class="icon" alt="icon">&nbsp;<span id="mones">00</span></div>
+                <div id="dishes-prepared"><img src="./img/icons8-еда-50.png" class="icon" alt="icon">&nbsp;<span id="dishes-prepareds">00</span></div> 
+                <button id="exit-button">Выйти</button>
             </div>
             <!--клиенты-->
             <div class="client">
-
+                <div id="message"></div>
+                <img src="" alt="">
             </div>
             <!--стол для готовки-->
             <div class="cooking-table">
                 
             </div>
-            <!--модaльные окна-->
-            <div class="start-window">
-                <h1>Santa Claus's Restaurant</h1>
-                <button id="start-button">Start Game</button>
-                <button id="exit-button">Exit</button>
+            
+        </div>
+        <!--модaльные окна-->
+        <div class="start-window">
+            <h1>Ресторан деда мороза</h1>
+            <div class="santa">
+                <span>Добро пожаловать в мой ресторан! Мне нужна ваша помощь, чтобы накормить всех этих голодных эльфов и их друзей. Давайте начнем!</span>
+                <img src="./img/santa-claus.png" class="Santa" alt="Santa">
             </div>
+            
+            <button class="start-button">Начать игру</button>
+
+        </div>
+
+        <div class="end-window">
+            <h1>Игра окончина</h1>
+            <div class="res-game"></div>
+            <button class="start-button">Играть занова</button>
+
         </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./script.js"></script>
 </body>
