@@ -25,3 +25,48 @@
     display: flex;
     justify-content: space-between;
 }
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.start-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.start-window h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#exit-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
