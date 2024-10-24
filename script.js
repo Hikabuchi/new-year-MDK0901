@@ -5,7 +5,7 @@
     let ingredients = ['chocolate', 'dough', 'sugar',
         'rice', 'fish', 'salt', 'water', 'cocoa powder',
         'coffee', 'bread', 'cheese', 'sausage', 'lettuce leaves',
-        'carrots', 'butter', 'apple', 'snowflakes', 'ginger',' Tea', 'cider'];
+        'carrots', 'butter', 'apple', 'snowflakes', 'ginger',' tea', 'cider'];
 
     let dishes = {
         'cookie' : 'Шоколадное печенье',
@@ -56,6 +56,24 @@
             alt : 'character'
         }
     };
+    function isCollide(...elements) {
+        for (let i = 0; i < elements.length; i++) {
+            for (let j = i + 1; j < elements.length; j++) {
+                const rect1 = elements[i][0].getBoundingClientRect();
+                const rect2 = elements[j][0].getBoundingClientRect();
+    
+                if (
+                    !(rect1.top > rect2.bottom ||
+                      rect1.bottom < rect2.top ||
+                      rect1.left > rect2.right ||
+                      rect1.right < rect2.left)
+                ) {
+                    return true; // Collision detected
+                }
+            }
+        }
+        return false; // No collisions
+    }
 
 $(document).ready(function() {
     
@@ -71,6 +89,8 @@ $(document).ready(function() {
         $('.field-of-play').css('display', 'block');
         $('.start-window').css('display', 'none');
         $('.end-window').css('display', 'none');
+        getDraggable()
+        recipes()
     }
 
     function exitGame() {
@@ -78,17 +98,15 @@ $(document).ready(function() {
         $('.field-of-play').css('display', 'none');
     }
 
+    function getDraggable() {
+        $(".ingredient").draggable({ scroll: true });
+    }
+
     function recipes() {
-        switch(expression) {
-            case 'chocolate' && 'dough' && 'sugar':
-                dishes.cookie;
-              break;
-            case 'rice' && 'fish' && 'salt':
-                dishes.fishRice;
-              break;
-            default:
-              // code block
-          }
+        if(isCollide($('.chocolate'), $('.dough'), $('.sugar'))) {
+            alert('Тыбыдыщь! Хьюстон, у нас проблемы!');
+            }
+        
     }
     
 });

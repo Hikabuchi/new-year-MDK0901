@@ -111,3 +111,8 @@ body {
 .end-window{
     display: none;
 }
+
+.ingredient img{
+    width: 60px;
+    height: auto;
+}
